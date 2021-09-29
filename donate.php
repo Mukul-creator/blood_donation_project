@@ -73,8 +73,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
     crossorigin="anonymous">
-
-
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/donate.css">
   <title>Blood boons</title>
@@ -82,51 +80,54 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
 
 <!-- style="background-color:grey;" -->
 <body >
-  <header class="inner">
-    <h2><a href="index.php"><i class="fas fa-code"></i>
-        Blood boons</a>
-      </h2>
-      <nav>
-        <ul>
-          <li>
-            <a href="index.php">Home</a>
-          </li>
-          <li>
-            <a href="donors.html">Donors</a>
-          </li>
-          <li>
-            <a href="requests.html">Requests</a>
-          </li> 
-          <li>
-            <a href="donate.php">Donate</a>
-          </li>
-          <li>
-            <a href="request_blood.php">Request blood</a>
-          </li> 
+<header class="inner">
+    <h2><a href="index.php">
+    
+            <img src="./img/icons8-blood-donation-64.png" class="img-fluid">
 
-          <li>
-            <a href="login.php">
-              <?php
+        Blood boons</a></h2>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.php">Home</a>
+        </li>
+        <li>
+          <a href="donors.php">Donors</a>
+        </li>
+        <li>
+          <a href="requests.php">Requests</a>
+        </li> 
+        <li>
+          <a href="donate.php">Donate</a>
+        </li>
+        <li>
+          <a href="request_blood.php">Request blood</a>
+        </li> 
 
-                  if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
-                  {
-                      echo("LogIn/SignUp");
-                  }
-              ?>
-            </a>
-          </li>
+        <li>
+          <a href="login.php">
+            <?php
+                if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
+                {
+                    echo("LogIn/SignUp");
+                }
+            ?>
+          </a>
+        </li>
 
-          <li>
-            <a href="logout.php">
-              <?php
-                  if(isset($_SESSION['loggedin']))
-                  {
-                      echo("logout");
-                  }
-              ?>
-            </a>
-          </li>
-        </ul>
+        <li>
+          <a href="logout.php">
+            <?php
+                if(isset($_SESSION['loggedin']))
+                {
+                    echo("logout");
+                }
+            ?>
+          </a>
+        </li>
+
+
+      </ul>
     </nav>
   </header>
 
@@ -211,19 +212,20 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
         <br>
         
         <button style = "border-radius: 12px; background-color: #04AA6D;
-  border: none;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;" type="button" onclick="myFunction()">  login  </button>
+          border: none;
+          color: white;
+          padding: 10px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;" type="button" onclick="myFunction()">  login  
+        </button>
         <script>
-        function myFunction() {
-              window.location.href="login.php";  
-     }
-   </script>
+          function myFunction() {
+                window.location.href="login.php";  
+                }
+        </script>
         
       </center>
     </div>

@@ -76,50 +76,54 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
 </head>
 
 <body>
-  <header class="inner">
-    <h2><a href="index.php"><i class="fas fa-code"></i>
+<header class="inner">
+    <h2><a href="index.php">
+    
+            <img src="./img/icons8-blood-donation-64.png" class="img-fluid">
+
         Blood boons</a></h2>
-      <nav>
-        <ul>
-          <li>
-            <a href="index.php">Home</a>
-          </li>
-          <li>
-            <a href="donors.html">Donors</a>
-          </li>
-          <li>
-            <a href="requests.html">Requests</a>
-          </li> 
-          <li>
-            <a href="donate.php">Donate</a>
-          </li>
-          <li>
-            <a href="request_blood.php">Request blood</a>
-          </li> 
+    <nav>
+      <ul>
+        <li>
+          <a href="index.php">Home</a>
+        </li>
+        <li>
+          <a href="donors.php">Donors</a>
+        </li>
+        <li>
+          <a href="requests.php">Requests</a>
+        </li> 
+        <li>
+          <a href="donate.php">Donate</a>
+        </li>
+        <li>
+          <a href="request_blood.php">Request blood</a>
+        </li> 
 
-          <li>
-            <a href="login.php">
-              <?php
+        <li>
+          <a href="login.php">
+            <?php
+                if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
+                {
+                    echo("LogIn/SignUp");
+                }
+            ?>
+          </a>
+        </li>
 
-                  if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
-                  {
-                      echo("LogIn/SignUp");
-                  }
-              ?>
-            </a>
-          </li>
+        <li>
+          <a href="logout.php">
+            <?php
+                if(isset($_SESSION['loggedin']))
+                {
+                    echo("logout");
+                }
+            ?>
+          </a>
+        </li>
 
-          <li>
-            <a href="logout.php">
-              <?php
-                  if(isset($_SESSION['loggedin']))
-                  {
-                      echo("logout");
-                  }
-              ?>
-            </a>
-          </li>
-        </ul>
+
+      </ul>
     </nav>
   </header>
   

@@ -121,19 +121,22 @@ mysqli_close($conn);
 </head>
 
 <body>
-  <header class="inner">
-    <h2><a href="index.php"><i class="fas fa-code"></i>
+<header class="inner">
+    <h2><a href="index.php">
+    
+            <img src="./img/icons8-blood-donation-64.png" class="img-fluid">
+
         Blood boons</a></h2>
-        <nav>
+    <nav>
       <ul>
         <li>
           <a href="index.php">Home</a>
         </li>
         <li>
-          <a href="donors.html">Donors</a>
+          <a href="donors.php">Donors</a>
         </li>
         <li>
-          <a href="requests.html">Requests</a>
+          <a href="requests.php">Requests</a>
         </li> 
         <li>
           <a href="donate.php">Donate</a>
@@ -174,7 +177,7 @@ mysqli_close($conn);
   <section id="login-signup" class="login-signup">
       <h2>
           <center>
-            Sign up for free!...
+            Sign up Now!...
           </center>
     </h2>
     <form action= "" method= "post">  
